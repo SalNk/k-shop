@@ -1,10 +1,11 @@
 import { View, Text, Image, StatusBar, SafeAreaView, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Button from '../components/Button'
+import Layout from './layout/Layout'
 
 export default function WelcomeScreen({ navigation }) {
     return (
-        <View className="bg-white">
+        <Layout>
             <View className="flex h-full items-center mx-12">
                 <StatusBar style="black" />
 
@@ -25,7 +26,7 @@ export default function WelcomeScreen({ navigation }) {
                     <Button title='Commencer' />
                 </TouchableOpacity>
             </View>
-        </View>
+        </Layout>
     )
 }
 
