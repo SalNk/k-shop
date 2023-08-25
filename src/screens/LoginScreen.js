@@ -2,16 +2,14 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import ButtonBorder from '../components/ButtonBorder'
 import Button from '../components/Button'
+import InputConnection from '../components/InputConnection'
 import Layout from './layout/Layout'
 import Separate from '../components/Separate'
-import { Actionsheet, useDisclose, Box, Center, NativeBaseProvider } from "native-base";
+import { Modal, FormControl, Input, Center, NativeBaseProvider } from "native-base";
+import { useState } from "react";
 
-export default function LoginScreen() {
-    const {
-        isOpen,
-        onOpen,
-        onClose
-    } = useDisclose();
+export default function LoginScreen({ navigation }) {
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <Layout>
@@ -23,7 +21,7 @@ export default function LoginScreen() {
                 <Text className="text-md text-center -mt-8">Connectez-vous pour profiter de toutes les fonctionnalités.</Text>
                 <View className="mt-8">
                     <TouchableOpacity
-                        onPress={onOpen}
+                        onPress={() => navigation.navigate('home')}
                     >
                         <Button title="Se connecter" />
                     </TouchableOpacity>
@@ -43,13 +41,42 @@ export default function LoginScreen() {
                 </View>
             </View>
 
-            <Actionsheet isOpen={isOpen} onClose={onClose}>
-                <Actionsheet.Content>
-                    <Box w="100%" h={60} px={4} justifyContent="center">
-                        <Input placeholder="placeholder" />
-                    </Box>
-                </Actionsheet.Content>
-            </Actionsheet>
-        </Layout>
+            {/* <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+                <Modal.Content maxWidth="400px">
+                    <Modal.CloseButton />
+                    <Modal.Header>
+                        <Text>Contact Us</Text>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <FormControl>
+                            <FormControl.Label>
+                                <Text>Name</Text>
+                            </FormControl.Label>
+                            <InputConnection />
+                        </FormControl>
+                        <FormControl mt="3">
+                            <FormControl.Label>
+                                <Text>Email</Text>
+                            </FormControl.Label>
+                            <InputConnection />
+                        </FormControl>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button.Group space={2}>
+                            <Button variant="ghost" colorScheme="blueGray" onPress={() => {
+                                setShowModal(false);
+                            }}>
+                                Cancel
+                            </Button>
+                            <Button onPress={() => {
+                                setShowModal(false);
+                            }}>
+                                <Text>Save</Text>
+                            </Button>
+                        </Button.Group>
+                    </Modal.Footer>
+                </Modal.Content>
+            </Modal> */}
+        </Layout >
     )
 }

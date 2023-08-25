@@ -4,10 +4,11 @@ import Button from '../components/Button'
 import Layout from './layout/Layout'
 
 export default function WelcomeScreen({ navigation }) {
+
     return (
         <Layout>
             <View className="flex h-full items-center mx-12">
-                <StatusBar style="black" />
+                {/* <StatusBar style="light" /> */}
 
                 <Image
                     source={require('./../../assets/adaptive-icon.png')}
@@ -17,7 +18,7 @@ export default function WelcomeScreen({ navigation }) {
                     source={require('./../../assets/all-in-one.jpg')}
                     className="h-[350] w-[350]"
                 />
-                <Text className="text-xl text-center font-semibold tracking-wide text-slate-700">
+                <Text className="text-xl text-center tracking-wide text-slate-700">
                     L'Appli tout en un qui vous permet de gérer le flux et le trafic de votre business
                 </Text>
                 <TouchableOpacity
