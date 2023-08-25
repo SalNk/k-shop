@@ -1,46 +1,41 @@
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image, FlatList, StatusBar } from 'react-native'
 import React from 'react'
 import Layout from './layout/Layout'
-import { StatusBar } from 'native-base'
-import SearchBar from '../components/SearchBar'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import ScrollCard from '../components/ScrollCard'
-import ScrollOrder from '../components/ScrollOrder'
+import BottomTabs from '../components/BottomTabs'
+import DATA from '../data/DATA'
+import Header from '../components/Header'
 
 export default function HomeScreen() {
   return (
     <>
       <Layout>
-        <View className="m-4">
-          <SafeAreaView>
-            <View className="flex-row justify-between items-center">
-              <Image
-                source={require('./../../assets/user.jpg')}
-                className="rounded-full w-12 h-12"
-              />
-              <Image
-                source={require('./../../assets/notification.png')}
-                className="rounded-full w-8 h-8"
-              />
-            </View>
-            <Text className="text-xl">Salut, Salem</Text>
-            <Text>
-              Prenez le contrôle de vos activités
-            </Text>
-            <View className="my-4">
-              <SearchBar placeholder={'Rechercher'} />
-            </View>
-          </SafeAreaView>
+        <StatusBar />
+        <View className="m-4 pt-1 h-full">
+          <FlatList
+            data={DATA}
+            renderItem={({ item }) =>
+              <View className="flex-row mt-3">
+                <Image
+                  source={require("./../../assets/user.png")}
+                  className="h-10 w-10"
+                />
+                <View className="ml-2">
+                  <Text className="font-bold">{item.name}</Text>
+                  <Text className="text-xs text-gray-500">{item.description}</Text>
+                </View>
+              </View>
+            }
+            keyExtractor={item => item.id}
+            ListHeaderComponent={<Header />}
+            showsVerticalScrollIndicator={false}
+          />
 
-          <View>
-            <ScrollCard />
-          </View>
-
-          <View className="my-4">
-            <ScrollOrder />
-          </View>
+          {/* <View className="absolute bottom-16 w-full shadow-2xl">
+            <BottomTabs />
+          </View> */}
 
         </View>
+
       </Layout >
     </>
   )
