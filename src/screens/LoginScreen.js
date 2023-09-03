@@ -2,10 +2,8 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import ButtonBorder from '../components/ButtonBorder'
 import Button from '../components/Button'
-import InputConnection from '../components/InputConnection'
 import Layout from './layout/Layout'
 import Separate from '../components/Separate'
-import { Modal, FormControl, Input, Center, NativeBaseProvider } from "native-base";
 import { useState } from "react";
 
 export default function LoginScreen({ navigation }) {

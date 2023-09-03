@@ -1,20 +1,21 @@
-import { View, Text, Image, FlatList, StatusBar } from 'react-native'
+import { View, Text, Image, FlatList } from 'react-native'
 import React from 'react'
 import Layout from './layout/Layout'
 import BottomTabs from '../components/BottomTabs'
 import DATA from '../data/DATA'
 import Header from '../components/Header'
+import { StatusBar } from 'expo-status-bar'
 
 export default function HomeScreen() {
   return (
     <>
       <Layout>
-        <StatusBar />
-        <View className="m-4 pt-1 h-full">
+        <StatusBar style='black' />
+        <View className="m-4 pt-4 h-full">
           <FlatList
             data={DATA}
             renderItem={({ item }) =>
-              <View className="flex-row mt-3">
+              <View className="flex-row mt-3 hover:bg-gray-900">
                 <Image
                   source={require("./../../assets/user.png")}
                   className="h-10 w-10"
@@ -30,12 +31,12 @@ export default function HomeScreen() {
             showsVerticalScrollIndicator={false}
           />
 
-          {/* <View className="absolute bottom-16 w-full shadow-2xl">
-            <BottomTabs />
-          </View> */}
+
 
         </View>
-
+        <View className="absolute bottom-0 w-full shadow-lg shadow-red-900/50">
+          <BottomTabs />
+        </View>
       </Layout >
     </>
   )
