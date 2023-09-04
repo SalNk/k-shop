@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function ClientScreen({ navigation }) {
+export default function Order({ navigation }) {
     return (
         <View>
-            <Text>ClientScreen</Text>
+            <Text>Order</Text>
         </View>
     )
 }

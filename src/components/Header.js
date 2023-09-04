@@ -10,7 +10,7 @@ export default function Header() {
             <SafeAreaView>
                 <View className="flex-row justify-between items-center">
                     <Image
-                        source={require('./../../assets/user.jpg')}
+                        source={require('./../../assets/sal.jpg')}
                         className="rounded-full w-12 h-12"
                     />
                     <Image

@@ -8,26 +8,41 @@ import { TouchableOpacity } from 'react-native';
 
 
 
-export default function BottomTabs() {
+export default function BottomTabs({ navigation }) {
     return (
-        <View className="rounded-t-xl w-full bg-gray-100 p-2  shadow-2xl flex-row justify-between">
-            <TouchableOpacity className="hover:bg-gray-200 p-2 rounded-xl">
+        <View className="rounded-t-xl w-full bg-gray-100 p-2  -shadow-2xl flex-row justify-between shadow-black ">
+            <TouchableOpacity
+                className="hover:bg-gray-200 p-2 rounded-xl"
+            // onPress={() => navigation.navigate('commande')}
+            >
                 <ArchiveBoxIcon color={'black'} size={30} />
             </TouchableOpacity>
 
-            <TouchableOpacity className="hover:bg-gray-200 p-2 rounded-xl">
+            <TouchableOpacity
+                className="hover:bg-gray-200 p-2 rounded-xl"
+            // onPress={() => navigation.navigate('client')}
+            >
                 <UserGroupIcon color={'black'} size={30} />
             </TouchableOpacity>
 
-            <TouchableOpacity className="hover:bg-gray-200 p-2 rounded-xl">
+            <TouchableOpacity
+                className="hover:bg-gray-200 p-2 rounded-xl"
+            // onPress={() => navigation.navigate('home')}
+            >
                 <HomeIcon color={'black'} size={30} />
             </TouchableOpacity>
 
-            <TouchableOpacity className="hover:bg-gray-200 p-2 rounded-xl">
+            <TouchableOpacity
+                className="hover:bg-gray-200 p-2 rounded-xl"
+            // onPress={() => navigation.navigate('')}
+            >
                 <ChatBubbleOvalLeftIcon color={'black'} size={30} />
             </TouchableOpacity>
 
-            <TouchableOpacity className="hover:bg-gray-200 p-2 rounded-xl">
+            <TouchableOpacity
+                className="hover:bg-gray-200 p-2 rounded-xl"
+            // onPress={() => navigation.navigate('')}
+            >
                 <Bars3Icon color={'black'} size={30} />
             </TouchableOpacity>
 

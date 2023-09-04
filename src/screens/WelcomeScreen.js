@@ -1,4 +1,4 @@
-import { View, Text, Image, StatusBar, SafeAreaView, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Button from '../components/Button'
 import Layout from './layout/Layout'
@@ -6,7 +6,7 @@ import Layout from './layout/Layout'
 export default function WelcomeScreen({ navigation }) {
 
     return (
-        <Layout>
+        <View className="bg-white h-full">
             <View className="flex h-full items-center mx-12">
                 {/* <StatusBar style="light" /> */}
 
@@ -27,12 +27,6 @@ export default function WelcomeScreen({ navigation }) {
                     <Button title='Commencer' />
                 </TouchableOpacity>
             </View>
-        </Layout>
+        </View>
     )
 }
-
-const style = StyleSheet.create({
-    screen: {
-
-    }
-})

@@ -1,7 +1,6 @@
 import { View, Text, Image, FlatList } from 'react-native'
 import React from 'react'
 import Layout from './layout/Layout'
-import BottomTabs from '../components/BottomTabs'
 import DATA from '../data/DATA'
 import Header from '../components/Header'
 import { StatusBar } from 'expo-status-bar'
@@ -31,12 +30,8 @@ export default function HomeScreen() {
             showsVerticalScrollIndicator={false}
           />
 
-
-
         </View>
-        <View className="absolute bottom-0 w-full shadow-lg shadow-red-900/50">
-          <BottomTabs />
-        </View>
+
       </Layout >
     </>
   )
