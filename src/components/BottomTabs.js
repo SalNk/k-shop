@@ -13,37 +13,37 @@ export default function BottomTabs({ navigation }) {
         <View className="rounded-t-xl w-full bg-gray-100 p-2  -shadow-2xl flex-row justify-between shadow-black ">
             <TouchableOpacity
                 className="hover:bg-gray-200 p-2 rounded-xl"
-            // onPress={() => navigation.navigate('commande')}
+                onPress={() => navigation.navigate('order')}
             >
-                <ArchiveBoxIcon color={'black'} size={30} />
+                <ArchiveBoxIcon color={'#5F5F5F'} size={30} />
             </TouchableOpacity>
 
             <TouchableOpacity
                 className="hover:bg-gray-200 p-2 rounded-xl"
             // onPress={() => navigation.navigate('client')}
             >
-                <UserGroupIcon color={'black'} size={30} />
+                <UserGroupIcon color={'#5F5F5F'} size={30} />
             </TouchableOpacity>
 
             <TouchableOpacity
                 className="hover:bg-gray-200 p-2 rounded-xl"
             // onPress={() => navigation.navigate('home')}
             >
-                <HomeIcon color={'black'} size={30} />
+                <HomeIcon color={'#2F2F2F'} size={30} />
             </TouchableOpacity>
 
             <TouchableOpacity
                 className="hover:bg-gray-200 p-2 rounded-xl"
             // onPress={() => navigation.navigate('')}
             >
-                <ChatBubbleOvalLeftIcon color={'black'} size={30} />
+                <ChatBubbleOvalLeftIcon color={'#5F5F5F'} size={30} />
             </TouchableOpacity>
 
             <TouchableOpacity
                 className="hover:bg-gray-200 p-2 rounded-xl"
             // onPress={() => navigation.navigate('')}
             >
-                <Bars3Icon color={'black'} size={30} />
+                <Bars3Icon color={'#5F5F5F'} size={30} />
             </TouchableOpacity>
 
         </View>

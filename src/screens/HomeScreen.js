@@ -4,13 +4,15 @@ import Layout from './layout/Layout'
 import DATA from '../data/DATA'
 import Header from '../components/Header'
 import { StatusBar } from 'expo-status-bar'
+import Button from '../components/Button'
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <>
       <Layout>
         <StatusBar style='black' />
         <View className="m-4 pt-4 h-full">
+
           <FlatList
             data={DATA}
             renderItem={({ item }) =>

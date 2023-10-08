@@ -19,7 +19,8 @@ export default function LoginScreen({ navigation }) {
                 <Text className="text-md text-center -mt-8">Connectez-vous pour profiter de toutes les fonctionnalités.</Text>
                 <View className="mt-8">
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('home')}
+                        // onPress={() => navigation.navigate('home')}
+                        onPress={() => navigation.navigate('message')}
                     >
                         <Button title="Se connecter" />
                     </TouchableOpacity>
