@@ -5,13 +5,13 @@ import FullSeparate from './FullSeparate'
 import Online from './Online'
 import NewMessage from './NewMessage'
 
-export default function HeaderMessage() {
+export default function HeaderMessage({ navigation }) {
     return (
         <View class>
             <View className="flex-row ms-center justify-between">
                 <Text className="text-3xl font-bold">Messages</Text>
                 <TouchableOpacity className="bg-slate-200 p-2 rounded-full">
-                    <MagnifyingGlassIcon color={'black'} />
+                    <MagnifyingGlassIcon color={'black'} onPress={navigation} />
                 </TouchableOpacity>
             </View>
 

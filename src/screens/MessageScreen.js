@@ -4,13 +4,15 @@ import Layout from './layout/Layout'
 import DATA from '../data/DATA'
 import HeaderMessage from '../components/HeaderMessage'
 import SearchScreen from '../components/SearchScreen'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StatusBar } from 'react-native'
 
 
 export default function MessageScreen({ navigation }) {
     return (
         <Layout>
             <View className="m-4 pt-4 h-full">
-                {/* <FlatList
+                <FlatList
                     data={DATA}
                     renderItem={({ item }) =>
                         <View className="flex-row items-center hover:bg-gray-900 mb-2">
@@ -30,13 +32,22 @@ export default function MessageScreen({ navigation }) {
                     keyExtractor={item => item.id}
                     showsVerticalScrollIndicator={false}
                     ListHeaderComponent={<View className="fixed top-0 left-0 right-0">
-                        <HeaderMessage />
+                        <HeaderMessage navigation={onPress = () => navigation.navigate('search')} />
                     </View>}
-                /> */}
+                />
             </View>
 
-            <SearchScreen/>
 
         </Layout>
+
+        // <SafeAreaProvider>
+        //     <View>
+
+        //         <SearchScreen />
+        //     </View>
+
+        // </SafeAreaProvider>
+
+
     )
 }
